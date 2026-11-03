@@ -1,1 +1,518 @@
 
+```html
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAN SIMULADOR | Links & Conteúdo</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0284C7',
+                            sky: '#38BDF8',
+                            dark: '#0B0F17',
+                            card: '#161F30',
+                            border: '#2A364F'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: radial-gradient(circle at top, #0f2338 0%, #0b0f17 70%);
+            min-height: 100vh;
+        }
+        .glass-panel {
+            background: rgba(22, 31, 48, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .badge-pulse {
+            animation: pulse-animation 2s infinite;
+        }
+        @keyframes pulse-animation {
+            0% { box-shadow: 0 0 0 0px rgba(56, 189, 248, 0.6); }
+            70% { box-shadow: 0 0 0 10px rgba(56, 189, 248, 0); }
+            100% { box-shadow: 0 0 0 0px rgba(56, 189, 248, 0); }
+        }
+        .icon-youtube {
+            background: #FF0000;
+            color: #FFFFFF;
+        }
+        .icon-instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: #FFFFFF;
+        }
+        .icon-tiktok {
+            background: #000000;
+            color: #FFFFFF;
+            border: 1px solid #22d3ee;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-100 antialiased selection:bg-sky-500 selection:text-black">
+
+    <!-- Grid background overlay -->
+    <div class="fixed inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none"></div>
+
+    <main class="max-w-xl mx-auto px-4 relative z-10 flex flex-col items-center pt-10 pb-12">
+
+        <!-- Header / Perfil -->
+        <header class="flex flex-col items-center text-center w-full mb-8">
+            <!-- Foto de Perfil Estilizada -->
+            <div class="relative mb-4 group">
+                <div class="w-28 h-28 rounded-full bg-slate-950 border-2 border-sky-500/50 overflow-hidden flex items-center justify-center shadow-2xl">
+                    <!-- Avatar baseado na imagem -->
+                    <div class="w-full h-full bg-black flex items-center justify-center flex-col">
+                        <span class="text-3xl font-black tracking-tighter text-sky-400">NAN</span>
+                        <span class="text-[9px] tracking-widest text-white font-semibold -mt-1">SIMULADOR</span>
+                    </div>
+                </div>
+                <!-- Badge verificado / online -->
+                <div class="absolute bottom-1 right-1 bg-sky-500 text-slate-950 rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold border-2 border-slate-950 badge-pulse" title="Criador Verificado">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+            </div>
+
+            <!-- Titulo -->
+            <h1 class="text-2xl font-black tracking-tight text-white">
+                NAN SIMULADOR
+            </h1>
+            <p class="text-slate-300 text-xs mt-2 max-w-xs font-light">🎮 Conteúdos diários de Simuladores de Caminhões, Fazendas e Tratores!</p>
+        </header>
+
+        <!-- Botões / Links Principais -->
+        <section class="w-full space-y-3.5 mb-10">
+
+            <!-- Link Único de Redes Sociais -->
+            <a href="#" onclick="openModal('socialModal')" 
+               class="glass-panel group relative flex items-center justify-between p-4 rounded-xl border border-slate-800 hover:border-sky-500/50 transition-all duration-300 hover:-translate-y-0.5">
+                <div class="flex items-center gap-3.5">
+                    <div class="flex -space-x-2 overflow-hidden">
+                        <div class="w-8 h-8 rounded-full icon-youtube flex items-center justify-center text-xs shadow-md border-2 border-slate-900">
+                            <i class="fa-brands fa-youtube"></i>
+                        </div>
+                        <div class="w-8 h-8 rounded-full icon-instagram flex items-center justify-center text-xs shadow-md border-2 border-slate-900">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div class="w-8 h-8 rounded-full icon-tiktok flex items-center justify-center text-xs shadow-md border-2 border-slate-900">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </div>
+                    </div>
+                    <div class="text-left ml-1">
+                        <h2 class="font-bold text-white group-hover:text-sky-400 transition-colors">Redes Sociais Oficiais</h2>
+                        <p class="text-xs text-slate-400">YouTube, Instagram e TikTok</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right text-xs text-slate-500 group-hover:text-sky-400 group-hover:translate-x-0.5 transition-all"></i>
+            </a>
+
+            <!-- Link Central de Mods -->
+            <a href="#" onclick="openModal('modsModal')" 
+               class="glass-panel group relative flex items-center justify-between p-4 rounded-xl border border-slate-800 hover:border-sky-500/50 transition-all duration-300 hover:-translate-y-0.5">
+                <div class="flex items-center gap-3.5">
+                    <div class="w-11 h-11 rounded-lg bg-black text-white flex items-center justify-center text-xl group-hover:scale-110 transition-transform border border-slate-800">
+                        <i class="fa-solid fa-tractor"></i>
+                    </div>
+                    <div class="text-left">
+                        <h2 class="font-bold text-white group-hover:text-sky-400 transition-colors">Central de Mods & Downloads</h2>
+                        <p class="text-xs text-slate-400">Assista e baixe carretas, tratores, APKs e mapas</p>
+                    </div>
+                </div>
+                <span class="bg-sky-500/10 text-sky-400 text-[10px] font-bold px-2 py-1 rounded border border-sky-500/20 uppercase">Ver Mods</span>
+            </a>
+
+            <!-- Link Grupo de Inscritos -->
+            <a href="#" onclick="showToast('Grupo dos Inscritos em breve!')" 
+               class="glass-panel group relative flex items-center justify-between p-4 rounded-xl border border-slate-800 hover:border-sky-500/50 transition-all duration-300 hover:-translate-y-0.5">
+                <div class="flex items-center gap-3.5">
+                    <div class="w-11 h-11 rounded-lg bg-black text-white flex items-center justify-center text-xl group-hover:scale-110 transition-transform border border-slate-800">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div class="text-left">
+                        <h2 class="font-bold text-white group-hover:text-sky-400 transition-colors">Grupo de Inscritos</h2>
+                        <p class="text-xs text-slate-400">Comunidade oficial no WhatsApp / Discord</p>
+                    </div>
+                </div>
+                <span class="bg-slate-800 text-slate-400 text-[10px] font-bold px-2 py-1 rounded border border-slate-700 uppercase">Em Breve</span>
+            </a>
+
+        </section>
+
+        <!-- Carrossel de Destaques / Novidades -->
+        <section class="w-full mb-10">
+            <div class="flex items-center justify-between mb-3 px-1">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-gamepad text-sky-400 text-sm"></i>
+                    <h2 class="text-sm font-bold text-white uppercase tracking-wider">Destaques & Novidades</h2>
+                </div>
+            </div>
+
+            <!-- Container do Carrossel (Proporção 16:9 HD Responsiva) -->
+            <div class="relative glass-panel rounded-2xl border border-slate-800 overflow-hidden group shadow-2xl w-full aspect-video" id="carouselContainer">
+                <div class="relative w-full h-full overflow-hidden" id="carouselSlides">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide absolute inset-0 transition-opacity duration-700 opacity-100 flex items-center justify-center bg-slate-900">
+                        <img src="imagens/foto1.jpg" onerror="this.src='https://placehold.co/1280x720/0b0f17/38bdf8?text=Foto+1+(1280x720)'" alt="Novidades 1" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent p-4 flex flex-col justify-end">
+                            <span class="bg-sky-500 text-slate-950 text-[10px] font-bold px-2 py-0.5 rounded w-max mb-1 uppercase">Série Nova</span>
+                            <h3 class="font-bold text-white text-sm sm:text-base">Fique atento aos vídeos do YouTube!</h3>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-slide absolute inset-0 transition-opacity duration-700 opacity-0 flex items-center justify-center bg-slate-900">
+                        <img src="imagens/foto2.jpg" onerror="this.src='https://placehold.co/1280x720/161f30/38bdf8?text=Foto+2+(1280x720)'" alt="Novidades 2" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent p-4 flex flex-col justify-end">
+                            <span class="bg-sky-400 text-black text-[10px] font-bold px-2 py-0.5 rounded w-max mb-1 uppercase">Gameplay</span>
+                            <h3 class="font-bold text-white text-sm sm:text-base">Novos projetos de simuladores chegando!</h3>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="carousel-slide absolute inset-0 transition-opacity duration-700 opacity-0 flex items-center justify-center bg-slate-900">
+                        <img src="imagens/foto3.jpg" onerror="this.src='https://placehold.co/1280x720/0f172a/f43f5e?text=Foto+3+(1280x720)'" alt="Novidades 3" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent p-4 flex flex-col justify-end">
+                            <span class="bg-rose-500 text-white text-[10px] font-bold px-2 py-0.5 rounded w-max mb-1 uppercase">Comunidade</span>
+                            <h3 class="font-bold text-white text-sm sm:text-base">Deixe seu like e ative o sininho!</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botões de Navegação -->
+                <button onclick="prevSlide()" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-950/70 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity border border-slate-700 hover:bg-slate-900">
+                    <i class="fa-solid fa-chevron-left text-xs"></i>
+                </button>
+                <button onclick="nextSlide()" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-950/70 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity border border-slate-700 hover:bg-slate-900">
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                </button>
+
+                <!-- Indicadores Dots -->
+                <div class="absolute bottom-2 right-3 flex gap-1.5 z-10" id="carouselDots">
+                    <button onclick="goToSlide(0)" class="w-2 h-2 rounded-full bg-sky-400"></button>
+                    <button onclick="goToSlide(1)" class="w-2 h-2 rounded-full bg-white/40"></button>
+                    <button onclick="goToSlide(2)" class="w-2 h-2 rounded-full bg-white/40"></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rodapé / Créditos -->
+        <footer class="w-full text-center pt-4 border-t border-slate-800/60">
+            <p class="text-xs text-slate-400 flex items-center justify-center gap-1.5 font-medium">
+                <i class="fa-solid fa-code text-sky-400"></i> Site criado & programado por <span class="text-white font-bold">NAN SIMULADOR</span>
+            </p>
+        </footer>
+
+    </main>
+
+    <!-- MODAL REDES SOCIAIS -->
+    <div id="socialModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="glass-panel w-full max-w-md rounded-2xl border border-slate-800 p-5 relative shadow-2xl">
+            <button onclick="closeModal('socialModal')" class="absolute top-4 right-4 text-slate-400 hover:text-white p-1">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div class="flex items-center gap-3 mb-5">
+                <div class="w-10 h-10 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center text-lg">
+                    <i class="fa-solid fa-share-nodes"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-white text-lg">Redes Sociais Oficiais</h3>
+                    <p class="text-xs text-slate-400">Acompanhe todos os conteúdos do Nan</p>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <!-- YouTube -->
+                <a href="https://youtube.com/@nansimulador?si=1vRHLh8bR79yLKFL" target="_blank" 
+                   class="flex items-center justify-between p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-red-500/50 transition-all group">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl icon-youtube flex items-center justify-center text-xl shadow-lg">
+                            <i class="fa-brands fa-youtube"></i>
+                        </div>
+                        <div class="text-left">
+                            <h4 class="font-bold text-white group-hover:text-red-400 transition-colors">YouTube</h4>
+                            <p class="text-[11px] text-slate-400">@nansimulador</p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-500 group-hover:text-red-400"></i>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/nansimuladorr?mdxt=aHhqa2djODJodDF3" target="_blank" 
+                   class="flex items-center justify-between p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-pink-500/50 transition-all group">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl icon-instagram flex items-center justify-center text-xl shadow-lg">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div class="text-left">
+                            <h4 class="font-bold text-white group-hover:text-pink-400 transition-colors">Instagram</h4>
+                            <p class="text-[11px] text-slate-400">@nansimuladorr</p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-500 group-hover:text-pink-400"></i>
+                </a>
+
+                <!-- TikTok -->
+                <a href="https://www.tiktok.com/@nansimulador" target="_blank" 
+                   class="flex items-center justify-between p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-cyan-400/50 transition-all group">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl icon-tiktok flex items-center justify-center text-xl shadow-lg">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </div>
+                        <div class="text-left">
+                            <h4 class="font-bold text-white group-hover:text-cyan-400 transition-colors">TikTok</h4>
+                            <p class="text-[11px] text-slate-400">@nansimulador</p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-500 group-hover:text-cyan-400"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL CENTRAL DE MODS POR CATEGORIAS -->
+    <div id="modsModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="glass-panel w-full max-w-lg rounded-2xl border border-slate-800 p-5 relative max-h-[85vh] flex flex-col shadow-2xl">
+            <!-- Header Modal -->
+            <div class="flex items-center justify-between mb-4 border-b border-slate-800 pb-3">
+                <div class="flex items-center gap-2.5">
+                    <button id="btnVoltarCategoria" onclick="mostrarCategorias()" class="hidden text-slate-400 hover:text-white mr-1 p-1">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <div>
+                        <h3 class="font-bold text-white text-base" id="modalModsTitulo">Central de Mods & Downloads</h3>
+                        <p class="text-xs text-slate-400" id="modalModsSubtitulo">Escolha uma categoria para baixar o mod</p>
+                    </div>
+                </div>
+                <button onclick="closeModal('modsModal')" class="text-slate-400 hover:text-white p-1">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Conteúdo dos Mods / Categorias -->
+            <div class="overflow-y-auto flex-1 pr-1 custom-scrollbar">
+                
+                <!-- Visão 1: Grid de Categorias -->
+                <div id="containerCategorias" class="grid grid-cols-2 gap-3">
+
+                    <button onclick="abrirCategoria('caminhoes', 'Caminhões')" class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-sky-500/50 flex flex-col items-center text-center group transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-truck-front"></i>
+                        </div>
+                        <span class="font-bold text-white text-sm">Caminhões</span>
+                        <span class="text-[10px] text-slate-400 mt-1">Skins e veículos completos</span>
+                    </button>
+
+                    <button onclick="abrirCategoria('carretas', 'Carretas')" class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-sky-500/50 flex flex-col items-center text-center group transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-truck-ramp-box"></i>
+                        </div>
+                        <span class="font-bold text-white text-sm">Carretas</span>
+                        <span class="text-[10px] text-slate-400 mt-1">Sider, caçamba e graneleira</span>
+                    </button>
+
+                    <button onclick="abrirCategoria('implementos', 'Implementos')" class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-sky-500/50 flex flex-col items-center text-center group transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-tractor"></i>
+                        </div>
+                        <span class="font-bold text-white text-sm">Implementos</span>
+                        <span class="text-[10px] text-slate-400 mt-1">Tratores e equipamentos</span>
+                    </button>
+
+                    <button onclick="abrirCategoria('sistemas', 'Sistemas')" class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-sky-500/50 flex flex-col items-center text-center group transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+                        <span class="font-bold text-white text-sm">Sistemas</span>
+                        <span class="text-[10px] text-slate-400 mt-1">Banco, oficinas e mecânica</span>
+                    </button>
+
+                    <button onclick="abrirCategoria('mapas', 'Objetos & Mapas')" class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-sky-500/50 flex flex-col items-center text-center group transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </div>
+                        <span class="font-bold text-white text-sm">Objetos & Mapas</span>
+                        <span class="text-[10px] text-slate-400 mt-1">Pallets, galpões e terenos</span>
+                    </button>
+
+                    <button onclick="abrirCategoria('apks', 'APKs')" class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-sky-500/50 flex flex-col items-center text-center group transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                        </div>
+                        <span class="font-bold text-white text-sm">APKs</span>
+                        <span class="text-[10px] text-slate-400 mt-1">Jogos modificados</span>
+                    </button>
+
+                </div>
+
+                <!-- Visão 2: Lista de Mods da Categoria -->
+                <div id="containerListaMods" class="hidden space-y-3">
+                    <!-- Será preenchido via JavaScript -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST DE NOTIFICAÇÃO -->
+    <div id="toast" class="fixed bottom-5 left-1/2 -translate-x-1/2 bg-slate-900 border border-sky-400 text-white text-xs px-4 py-2.5 rounded-xl shadow-2xl transition-all duration-300 opacity-0 pointer-events-none z-50 flex items-center gap-2">
+        <i class="fa-solid fa-circle-info text-sky-400"></i>
+        <span id="toastMsg">Mensagem</span>
+    </div>
+
+    <script>
+        // Dados dos Mods por Categoria
+        const modsData = {
+            caminhoes: [],
+            carretas: [],
+            implementos: [],
+            sistemas: [],
+            mapas: [],
+            apks: []
+        };
+
+        // Funções de Modal
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            if (id === 'modsModal') {
+                mostrarCategorias();
+            }
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.add('opacity-0', 'pointer-events-none');
+        }
+
+        // Navegação de Categorias de Mods
+        function mostrarCategorias() {
+            document.getElementById('containerCategorias').classList.remove('hidden');
+            document.getElementById('containerListaMods').classList.add('hidden');
+            document.getElementById('btnVoltarCategoria').classList.add('hidden');
+            document.getElementById('modalModsTitulo').innerText = "Central de Mods & Downloads";
+            document.getElementById('modalModsSubtitulo').innerText = "Escolha uma categoria para baixar o mod";
+        }
+
+        function abrirCategoria(chave, nome) {
+            const lista = modsData[chave] || [];
+            const containerLista = document.getElementById('containerListaMods');
+            
+            document.getElementById('containerCategorias').classList.add('hidden');
+            containerLista.classList.remove('hidden');
+            document.getElementById('btnVoltarCategoria').classList.remove('hidden');
+            document.getElementById('modalModsTitulo').innerText = nome;
+            document.getElementById('modalModsSubtitulo').innerText = `Vídeos e links de ${nome.toLowerCase()}`;
+
+            if(lista.length === 0) {
+                containerLista.innerHTML = `
+                    <div class="text-center py-10 px-4 border border-dashed border-slate-800 rounded-xl">
+                        <i class="fa-solid fa-clock-rotate-left text-3xl text-slate-600 mb-3"></i>
+                        <h4 class="font-bold text-white text-sm">Novos mods em breve!</h4>
+                        <p class="text-xs text-slate-400 mt-1">Estou preparando os vídeos no YouTube. Logo mais terão dezenas de mods disponíveis aqui!</p>
+                    </div>
+                `;
+            } else {
+                containerLista.innerHTML = lista.map(mod => `
+                    <a href="${mod.url}" target="_blank" class="flex items-center justify-between p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-sky-500/50 transition-all group">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-sky-500/10 text-sky-400 flex items-center justify-center text-lg group-hover:scale-105 transition-transform">
+                                <i class="fa-solid fa-cloud-arrow-down"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm group-hover:text-sky-400 transition-colors">${mod.titulo}</h4>
+                                <p class="text-[11px] text-slate-400 flex items-center gap-1.5 mt-0.5">
+                                    <i class="fa-brands fa-youtube text-red-500 text-xs"></i> Assista o vídeo para baixar
+                                </p>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-xs text-slate-500 group-hover:text-sky-400"></i>
+                    </a>
+                `).join('');
+            }
+        }
+
+        // Sistema de Carrossel Automático (5 segundos)
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('#carouselDots button');
+        let slideInterval = setInterval(nextSlide, 5000);
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.remove('opacity-0');
+                    slide.classList.add('opacity-100');
+                } else {
+                    slide.classList.remove('opacity-100');
+                    slide.classList.add('opacity-0');
+                }
+            });
+
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.className = "w-2 h-2 rounded-full bg-sky-400";
+                } else {
+                    dot.className = "w-2 h-2 rounded-full bg-white/40";
+                }
+            });
+
+            currentSlide = index;
+        }
+
+        function nextSlide() {
+            let newIndex = (currentSlide + 1) % slides.length;
+            showSlide(newIndex);
+        }
+
+        function prevSlide() {
+            let newIndex = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(newIndex);
+        }
+
+        function goToSlide(index) {
+            showSlide(index);
+            resetInterval();
+        }
+
+        function resetInterval() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+
+        // Pausa no Hover do Carrossel
+        const carouselContainer = document.getElementById('carouselContainer');
+        carouselContainer.addEventListener('mouseenter', () => clearInterval(slideInterval));
+        carouselContainer.addEventListener('mouseleave', () => resetInterval());
+
+        // Toast Helper
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').innerText = msg;
+            toast.classList.remove('opacity-0', 'pointer-events-none');
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'pointer-events-none');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
+```
